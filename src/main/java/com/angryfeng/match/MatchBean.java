@@ -37,9 +37,7 @@ public class MatchBean {
         this.matchStatus = matchStatus;
     }
 
-    public synchronized boolean canMatch(MatchBean visitor) {
-        //第2档匹配
-        //第1档匹配
+    public synchronized boolean canMatch() {
         if (matchStatus.equals(MatchStatus.matching)) {
             matchStatus = MatchStatus.matched;
             return true;
